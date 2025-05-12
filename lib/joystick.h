@@ -17,5 +17,5 @@ extern uint8_t indice_menu;
 extern absolute_time_t debounce_joy;
 
 
-int64_t joy_callback(alarm_id_t id, void *user_data);
+void joy_read();
 void joystick_setup();

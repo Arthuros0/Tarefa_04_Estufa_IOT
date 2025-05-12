@@ -79,7 +79,7 @@ void imprime_informacoes(){
   }
 }
 
-bool simula_clima(struct repeating_timer *t){
+void simula_clima(){
   for (uint8_t i = 0; i < NUM_ESTUFAS; i++)
   {
     if(estufas[i].status_umidade && estufas[i].umidade_ar < MAX_VALOR)
@@ -105,7 +105,7 @@ bool simula_clima(struct repeating_timer *t){
     }
   }
   atualiza_estado_estufa();
-  return true;
+
 }
 
 void alterna_fertirrigacao(uint8_t i){

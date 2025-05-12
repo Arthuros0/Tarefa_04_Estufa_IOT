@@ -52,7 +52,7 @@ void mensagem_valores(ssd1306_t *ssd){
 
 void desenha_menu(ssd1306_t *ssd){
   if(menu_estufas){
-    imprime_informacoes();
+    //imprime_informacoes();
     limpa_display(ssd,cor);
     if(sub_menu_estufas){
       mensagem_valores(ssd);
@@ -286,7 +286,7 @@ void ssd1306_draw_string(ssd1306_t *ssd, const char *str, uint8_t x, uint8_t y)
   }
 }
 
-// '46555463-estufa-icone-ilustracao-vetor-removebg-preview (1)', 64x128px
+// '46555463-estufa-icone-ilustracao-vetor-removebg-preview', 64x128px
 const uint8_t bitmap_estufa[] = {
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,

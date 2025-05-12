@@ -16,9 +16,9 @@
 #define MIN_VALOR 0
 #define MAX_VALOR 100
 
-#define TAXA_UMIDADE_SOLO 1.3
+#define TAXA_UMIDADE_SOLO 1.0
 #define TAXA_DEC_UMIDADE_SOLO 0.5
-#define TAXA_UMIDADE_AR 1.8
+#define TAXA_UMIDADE_AR 1.5
 #define TAXA_DEC_UMIDADE_AR 0.5
 #define TAXA_TEMPERATURA 0.7
 #define TAXA_DEC_TEMPERATURA 0.3
@@ -46,7 +46,7 @@ extern estufa estufas[3];
 
 void atualiza_estado_estufa();
 void imprime_informacoes();
-bool simula_clima(struct repeating_timer *t);
+void simula_clima();
 void alterna_fertirrigacao(uint8_t i);
 void init_estufas();
 

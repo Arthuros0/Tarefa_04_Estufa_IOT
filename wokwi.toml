@@ -1,4 +1,4 @@
 [wokwi]
 version = 1
-firmware = 'build/Projeto_final.uf2'
-elf = 'build/Projeto_final.elf'
+firmware = 'build/Estufa_Webserver.uf2'
+elf = 'build/Estufa_Webserver.elf'

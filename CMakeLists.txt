@@ -37,6 +37,7 @@ add_executable(${PROJECT_NAME}
         lib/matrix_leds.c #Biblioteca para controle da matriz de LEDs
         lib/joystick.c
         lib/estufa.c
+        lib/webserver.c
         )
 
 pico_generate_pio_header(${PROJECT_NAME} ${CMAKE_CURRENT_LIST_DIR}/lib/pio_matrix.pio)
@@ -52,6 +53,7 @@ target_link_libraries(${PROJECT_NAME}
         hardware_i2c
         FreeRTOS-Kernel 
         FreeRTOS-Kernel-Heap4
+        pico_cyw43_arch_lwip_threadsafe_background
         )
 
 pico_enable_stdio_usb(${PROJECT_NAME} 1)

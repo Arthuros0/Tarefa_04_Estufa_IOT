@@ -16,7 +16,7 @@ void joystick_setup(){
   adc_gpio_init(X_JOY);
 }
 
-int64_t joy_callback(alarm_id_t id, void *user_data){
+void joy_read(){
   if (menu_estufas)
   {
     if(time_reached(debounce_joy)){
@@ -26,14 +26,12 @@ int64_t joy_callback(alarm_id_t id, void *user_data){
         {
           indice_menu--;
           if(indice_menu>2)indice_menu=2;
-          debounce_joy=delayed_by_ms(get_absolute_time(),250);
-          return 200000;
+          //debounce_joy=delayed_by_ms(get_absolute_time(),250);
         }else if ((adc_read()) < MIN_JOY)
         {
           indice_menu++;
           if(indice_menu>2)indice_menu=0;
-          debounce_joy=delayed_by_ms(get_absolute_time(),250);
-          return 200000;
+          //debounce_joy=delayed_by_ms(get_absolute_time(),250);
         }
       }
       adc_select_input(X_CHANNEL);
@@ -46,8 +44,7 @@ int64_t joy_callback(alarm_id_t id, void *user_data){
         }else{
           sub_menu_estufas=true;
         }
-        debounce_joy=delayed_by_ms(get_absolute_time(),250);
-        return 200000;
+        //debounce_joy=delayed_by_ms(get_absolute_time(),250);
       }else if ((adc_read()) < MIN_JOY)
       {
         if (sub_menu_estufas)
@@ -56,14 +53,10 @@ int64_t joy_callback(alarm_id_t id, void *user_data){
         }else{
           menu_status=true;
         }
-        debounce_joy=delayed_by_ms(get_absolute_time(),250);
-        return 200000;
+        //debounce_joy=delayed_by_ms(get_absolute_time(),250);
       }
 
     }
-    return 250000;
-  
   }
-  return 0;
 }
 
