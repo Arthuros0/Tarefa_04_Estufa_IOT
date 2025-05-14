@@ -34,12 +34,6 @@ err_t tcp_server_recv(void *arg, struct tcp_pcb *tpcb, struct pbuf *p, err_t err
 }
 
 // === Função chamada na tarefa do FreeRTOS apenas para manter a pilha funcionando ===
-void vWebServerTask(void *params) {
-    while (1) {
-        cyw43_arch_poll();  // Mantém a stack LwIP viva
-        vTaskDelay(pdMS_TO_TICKS(100));
-    }
-}
 
 // === Inicializa Wi-Fi e conecta ===
 int init_wifi() {
