@@ -1,4 +1,4 @@
-# **Projeto Final: Estufa inteligente**
+# **EM DESENVOLVIMENTO: Estufa inteligente IOT**
 Este projeto implementa um sistema de monitoramento e controle para estufas utilizando o microcontrolador Raspberry Pi Pico W, LEDs endereçáveis WS2812 e display OLED ssd1306.O objetivo é otimizar o uso de recursos naturais, como água e fertilizantes, além de melhorar a eficiência energética e a qualidade da produção.
 
 ## **Funcionalidades**
@@ -50,4 +50,4 @@ Certifique-se de que os seguintes itens estão instalados:
 3. Coloque a placa em modo **BootSel**:
    - Pressione e segure o botão **BOOTSEL** enquanto conecta a placa pelo cabo USB.
    - Caso esteja utilizando a BitDogLab, aperte o botão **RESET** enquanto pressiona e segura o botão **BOOTSEL** (este método não exige a reconexão do cabo USB) 
-4. Localize o arquivo gerado com extensão .uf2 (como **tarefa_adc.uf2**) e arraste-o para o dispositivo que aparecerá no computador. Ou selecione a opção "**Run Project(USB)**" da extensão Raspberry Pi Pico no **Visual Studio Code**.
+4. Localize o arquivo gerado com extensão .uf2 (como **Estufa_webserver.uf2**) e arraste-o para o dispositivo que aparecerá no computador. Ou selecione a opção "**Run Project(USB)**" da extensão Raspberry Pi Pico no **Visual Studio Code**.
