@@ -66,8 +66,9 @@ void init_button(uint8_t pin);
 
 void vMatrixTask(){
 
+    printf("Iniciando Matrix\n");
     setup_led_matrix();
-
+    printf("Matrix Iniciada\n");
     while (1)
     {
         desenha_status();
@@ -219,7 +220,7 @@ int main()
 
     xTaskCreate(vSimulaEstufaTask, "Estufa Task",configMINIMAL_STACK_SIZE,NULL,tskIDLE_PRIORITY,NULL);
 
-    //xTaskCreate(vMatrixTask, "Matrix Task",configMINIMAL_STACK_SIZE,NULL,tskIDLE_PRIORITY,NULL);
+    xTaskCreate(vMatrixTask, "Matrix Task",configMINIMAL_STACK_SIZE,NULL,tskIDLE_PRIORITY,NULL);
 
     xTaskCreate(vJoystickTask, "Joystick Task",configMINIMAL_STACK_SIZE,NULL,tskIDLE_PRIORITY,NULL);
 
@@ -309,9 +310,6 @@ static err_t tcp_server_recv(void *arg, struct tcp_pcb *tpcb, struct pbuf *p, er
 
     // Tratamento de request - Controle dos LEDs
     user_request(&request);
-    
-    // Leitura da temperatura interna
-    float temperature = temp_read();
 
     // Cria a resposta HTML
     char html[2048];

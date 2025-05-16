@@ -63,7 +63,7 @@ void desenha_status(){
             pio_sm_put_blocking(pio0,sm,status[24-pos]);
         }
         status_alterado=false;
-        sleep_us(100);
+        //sleep_us(100);
     }
 }
 
@@ -72,7 +72,7 @@ void setup_led_matrix() {
     bool ok;
     // Configura o clock para 133 MHz
     ok = set_sys_clock_khz(133000, false);
-    stdio_init_all();
+    //stdio_init_all();
 
     printf("Iniciando a transmissão PIO\n");
     if (ok) printf("Clock configurado para %ld Hz\n", clock_get_hz(clk_sys));
